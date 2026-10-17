@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+  --color-primary-950: #1e1b4b;
+}
+
+/* ---- Reusable component classes ---- */
+
+.card {
+  @apply bg-white rounded-xl border border-slate-200/80;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.04);
+}
+
+.card-hover {
+  @apply hover:border-slate-300/80 transition-all duration-200;
+}
+.card-hover:hover {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-indigo-600 text-white text-sm font-semibold rounded-lg shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 active:bg-indigo-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-slate-700 text-sm font-semibold rounded-lg border border-slate-300 shadow-sm hover:bg-slate-50 hover:border-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 active:bg-slate-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150;
+}
+
+.btn-success {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-emerald-600 text-white text-sm font-semibold rounded-lg shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 active:bg-emerald-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150;
+}
+
+.btn-danger {
+  @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-red-600 text-white text-sm font-semibold rounded-lg shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 active:bg-red-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-150;
+}
+
+.btn-sm {
+  @apply px-3 py-1.5 text-xs;
+}
+
+.input-field {
+  @apply w-full px-3.5 py-2.5 bg-white border border-slate-300 rounded-lg text-sm text-slate-900 placeholder-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-colors duration-150;
+}
+
+.input-field-error {
+  @apply border-red-300 focus:ring-red-500/20 focus:border-red-500;
+}
+
+.input-label {
+  @apply block text-sm font-medium text-slate-700 mb-1.5;
+}
+
+.table-header {
+  @apply px-5 py-3.5 text-left text-xs font-semibold text-slate-500 uppercase tracking-wider;
+}
+
+.table-cell {
+  @apply px-5 py-4 text-sm text-slate-700;
+}
+
+.section-title {
+  @apply text-lg font-semibold text-slate-900 tracking-tight;
+}
+
+.page-title {
+  @apply text-2xl font-bold text-slate-900 tracking-tight;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
